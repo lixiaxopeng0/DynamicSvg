@@ -1,0 +1,29 @@
+.path-exhibition {
+    /* 去掉填充效果 */
+    fill: none;
+    /* 图标外轮廓颜色 */
+    stroke: #333;
+    /* 图标外轮廓的宽度 */
+    stroke-width: 3;
+    /* 两端形状 */
+    stroke-linecap: round;
+}
+
+.svg-exhibition:hover .path-exhibition{
+    animation: move 1s;
+    -webkit-animation: move 1s;
+}
+
+/* 动画 */
+@keyframes move {
+    0% {
+        /* 描边的点划线的图案范式: 线、空隙 ...*/
+        /* 0% 全空白 */
+        stroke-dasharray: 0, 600px;
+    }
+
+    100% {
+        /* 100% 全填充 */
+        stroke-dasharray: 600px, 0;
+    }
+}
